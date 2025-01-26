@@ -10,7 +10,7 @@ If you encounter any issues, check the log file or report them to ChmtTnky.
 
 Command Line Usage:
 
-PCK-Editor.exe <Path to PCK File> <Mode> <Options>
+`PCK-Editor.exe <Path to PCK File> <Mode> <Options>`
 
 Modes:
 ```
