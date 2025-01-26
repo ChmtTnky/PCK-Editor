@@ -29,13 +29,15 @@ This is required because SOF will not play sound files if they lack comments des
 
 To include loop data in your files, you have to encode them using "opusenc.exe", since FFMPEG and other similar tools won't do this for you. To accomplish this, use the following arguments with "opusenc.exe":
 
-`opusenc.exe <new_sound.wav> <internal_sound_name.ext> --comment "LoopStart=<Sample>" -- comment "LoopEnd=<Sample>"`
+`opusenc.exe <new_sound.wav> <internal_sound_name.ext> --comment "LoopStart=<Sample>" --comment "LoopEnd=<Sample>"`
 
 An example in practice might look like:
 
-`opusenc my_song.wav BGM03.bgm --comment "LoopStart=175900" --comment "LoopEnd=3012183"`
+`opusenc my_song.wav my_song.opus --comment "LoopStart=175900" --comment "LoopEnd=3012183"`
 
-Then, import it into the game files with the PCK Editor.
+Then, import it into the game files with the PCK Editor, such as with this command:
+
+`PCK-Editor.exe BGM.pck -r BGM03.bgm my_song.opus` 
 
 If the game still refuses to play your sound file, it's possible that the sound doesn't need both comments, so try adding or removing one or both and see what happens. Additionally, the comment describes a sample position, not the time in seconds or milliseconds, so you will need a tool such as Audacity to find the exact loop points and their sample numbers. You can also check the comments of the sound file you are trying to change with a tool like HxD, which can help you determine exactly what the game wants from you.
 
