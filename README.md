@@ -6,11 +6,13 @@ To use the PCKEditor, run the EXE with a path to a PCK as the first argument (wh
 Command Line Usage:
 PCK-Editor.exe <Path to PCK File> <Mode> <Options>
 Modes:
-```<-E or --ExtractAll>
+```
+<-E or --ExtractAll>
 <-R or --RepackAll> <Path to folder containing OGG sound files> <Text file with an OGG file name on each line in the order to repack them>
 <-e or --Extract> <Internal name of a given sound file>
 <-r or --Replace> <Internal name of a given sound file> <Path to new OGG file>
-<-L or --ListAll>```
+<-L or --ListAll>
+```
 
 ## Details
 The code includes an implementation of both a PCK class and a Sound class, each of which can be easily incorporated into other projects. The bulk of the important code is found in the constructor and Write() function of the PCKFile class, while the PCKEditor contains useful prewritten operations.
