@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SOF-PCKEditor": {
+      "commandName": "Project",
+      "commandLineArgs": "test.pck -R BGM BGM.txt"
+    }
+  }
+}
